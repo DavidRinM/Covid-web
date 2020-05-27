@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/549494a02c.js" crossorigin="anonymous"></script>
     
     <!-- Navbar -->
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/navbar.css">
     <script src="Js/navbar.js" defer></script>
+
+    <!-- Crousel -->
+    <link rel="stylesheet" href="Style/carousel.css">
+    <script src="Js/carousel.js" defer></script>
     <title>COVID-19</title>
 </head>
+
 <body>
     <nav class="navbar">
         <section class="brand-title"> COVID-19</section>
@@ -24,5 +30,17 @@
             </ul>
         </section>
     </nav>
+
+    <section class="carousel-container">
+        <i class="fas fa-arrow-left" id="prev-button"></i>
+        <i class="fas fa-arrow-right" id="next-button"></i>
+        <section class="carousel-slide">
+            <img src="Images/Carousel/Hand-wash2.png" alt="" id="lastClone">
+            <img src="Images/Carousel/COVID-Cover.jpg" alt="">
+            <img src="Images/Carousel/Hand-wash1.png" alt="">
+            <img src="Images/Carousel/Hand-wash2.png" alt="">
+            <img src="Images/Carousel/COVID-Cover.jpg" alt="" id="firstClone">
+        </section>
+    </section>
 </body>
 </html>
