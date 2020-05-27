@@ -21,6 +21,7 @@ def execute_cud(query):
     try:
         cursor = connection.cursor()
         cursor.execute(query)
+        connection.commit()
     except sqlite3.Error as e:
         print(f"Error creating table {e}")
     finally:
