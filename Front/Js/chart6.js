@@ -1,49 +1,56 @@
-// Themes begin
-am4core.useTheme(am4themes_animated);
-// Themes end
+var promise = fetch('http://0.0.0.0:5000/graphs/6').then(
+  function(response){
+    return 200
+  }
+).catch(error => {return 500})
 
-// Create chart instance
-let chart = am4core.create("chart6", am4charts.PieChart);
+promise.then(response => {
+  if(response == 200){
+    var request = new XMLHttpRequest()
+    request.open('GET', 'http://0.0.0.0:5000/graphs/6', true)
+    request.onload = function() {
+      var data = JSON.parse(this.response)
+      console.log(data)
+      createChart6(data)
+    }
+    request.send()
+  } else {
+    var data = {
+      "actual_sick": 214517,
+      "total_deaths": 111333
+    }
+    createChart6(data)
+  }
+})
 
-// Add data
-chart.data = [ {
-  "country": "Lithuania",
-  "litres": 501.9
-}, {
-  "country": "Czechia",
-  "litres": 301.9
-}, {
-  "country": "Ireland",
-  "litres": 201.1
-}, {
-  "country": "Germany",
-  "litres": 165.8
-}, {
-  "country": "Australia",
-  "litres": 139.9
-}, {
-  "country": "Austria",
-  "litres": 128.3
-}, {
-  "country": "UK",
-  "litres": 99
-}, {
-  "country": "Belgium",
-  "litres": 60
-}, {
-  "country": "The Netherlands",
-  "litres": 50
-} ];
 
-// Add and configure Series
-let pieSeries = chart.series.push(new am4charts.PieSeries());
-pieSeries.dataFields.value = "litres";
-pieSeries.dataFields.category = "country";
-pieSeries.slices.template.stroke = am4core.color("#fff");
-pieSeries.slices.template.strokeWidth = 2;
-pieSeries.slices.template.strokeOpacity = 1;
+var createChart6 = (data) => {
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
 
-// This creates initial animation
-pieSeries.hiddenState.properties.opacity = 1;
-pieSeries.hiddenState.properties.endAngle = -90;
-pieSeries.hiddenState.properties.startAngle = -90;
+  // Create chart instance
+  let chart = am4core.create("chart6", am4charts.PieChart);
+
+  // Add data
+  chart.data = [ {
+    "Count": "Total de enfermos",
+    "count": data["actual_sick"]
+  }, {
+    "Count": "Total de muertos",
+    "count": data["total_deaths"]
+  } ];
+
+  // Add and configure Series
+  let pieSeries = chart.series.push(new am4charts.PieSeries());
+  pieSeries.dataFields.value = "count";
+  pieSeries.dataFields.category = "Count";
+  pieSeries.slices.template.stroke = am4core.color("#fff");
+  pieSeries.slices.template.strokeWidth = 2;
+  pieSeries.slices.template.strokeOpacity = 1;
+
+  // This creates initial animation
+  pieSeries.hiddenState.properties.opacity = 1;
+  pieSeries.hiddenState.properties.endAngle = -90;
+  pieSeries.hiddenState.properties.startAngle = -90;
+}

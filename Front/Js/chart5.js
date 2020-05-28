@@ -1,41 +1,58 @@
 // Preparing the chart data
-const chartData = [
+
+var promise = fetch('http://0.0.0.0:5000/graphs/5').then(
+  function(response){
+    return 200
+  }
+).catch(error => {return 500})
+
+promise.then(response => {
+  if(response == 200){
+    var request = new XMLHttpRequest()
+    request.open('GET', 'http://0.0.0.0:5000/graphs/5', true)
+    request.onload = function() {
+      var data = JSON.parse(this.response)
+      createChart5(data)
+    }
+    request.send()
+  } else {
+    var data = {
+      "death_5/21/2020": 217,
+      "death_5/22/2020": 153,
+      "death_5/23/2020": 137,
+      "death_5/24/2020": 110,
+      "death_5/25/2020": 18
+    }
+    createChart5(data)
+  }
+})
+
+var createChart5 = (data) => {
+  const chartData = [
     {
-      label: "Venezuela",
-      value: "290"
+      label: "5/21/2020",
+      value: data["death_5/21/2020"]
     },
     {
-      label: "Saudi",
-      value: "260"
+      label: "5/22/2020",
+      value: data["death_5/22/2020"]
     },
     {
-      label: "Canada",
-      value: "180"
+      label: "5/23/2020",
+      value: data["death_5/23/2020"]
     },
     {
-      label: "Iran",
-      value: "140"
+      label: "5/24/2020",
+      value: data["death_5/24/2020"]
     },
     {
-      label: "Russia",
-      value: "115"
-    },
-    {
-      label: "UAE",
-      value: "100"
-    },
-    {
-      label: "US",
-      value: "30"
-    },
-    {
-      label: "China",
-      value: "30"
+      label: "5/25/2020",
+      value: data["death_5/25/2020"]
     }
   ];
 
 // Create a JSON object to store the chart configurations
-const chartConfigs = {
+  const chartConfigs = {
     //Specify the chart type
     type: "column2d",
     //Set the container object
@@ -63,9 +80,12 @@ const chartConfigs = {
       // Chart Data from Step 2
       data: chartData
     }
-};
+  };
 
-FusionCharts.ready(function(){
-    var fusioncharts = new FusionCharts(chartConfigs);
-    fusioncharts.render();
-});
+  FusionCharts.ready(function(){
+      var fusioncharts = new FusionCharts(chartConfigs);
+      fusioncharts.render();
+  });
+}
+
+
