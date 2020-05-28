@@ -1,0 +1,13 @@
+.charts-container {
+    display: flex;
+  }
+  
+.charts {
+    flex: 50%;
+}
+
+@media screen and (max-width: 720px) {
+    .charts {
+      width: 100%;
+    }
+  }
