@@ -24,7 +24,7 @@ def create_connection(db_file):
 
 
 def query_data(query):
-    connection = create_connection('./database/covid_data.db')
+    connection = create_connection('app/database/covid_data.db')
     data = None
     try:
         cursor = connection.cursor()
