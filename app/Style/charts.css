@@ -1,0 +1,24 @@
+.charts-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.charts-container > div {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+
+.charts-container > div > section{
+  width: 50%;
+  height: 10%;
+  margin: ;
+}
+  
+
+@media screen and (max-width: 720px) {
+    .charts1 {
+      width: 100%;
+    }
+  }
