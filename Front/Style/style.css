@@ -1,0 +1,43 @@
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+p{
+  padding-bottom: 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+.page-content {
+    min-height: 100%;
+  
+    /* same measurement as footer */
+    margin-bottom: -120px;
+}
+  
+.page-content::after {
+    content: "";
+    display: block;
+}
+  
+footer, .page-content::after {
+  height: 50px;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52, 175, 155);
+  color: white;
+  font-size: 20px;
+}
