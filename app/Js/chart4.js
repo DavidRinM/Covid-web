@@ -98,19 +98,24 @@ var createChart4 = (data) => {
         "margin-bottom": "20%"
       },
       "series": [{
-          "values": [data["new_5/21/2020"]]
+          "values": [data["new_5/21/2020"]],
+          'background-color': '#67B7DC',
         },
         {
-          "values": [data["new_5/22/2020"]]
+          "values": [data["new_5/22/2020"]],
+          'background-color': '#6794DC'
         },
         {
-          "values": [data["new_5/23/2020"]]
+          "values": [data["new_5/23/2020"]],
+          'background-color': '#8E5EA2'
         },
         {
-          "values": [data["new_5/24/2020"]]
+          "values": [data["new_5/24/2020"]],
+          'background-color': '#6794BD'
         },
         {
-          "values": [data["new_5/25/2020"]]
+          "values": [data["new_5/25/2020"]],
+          'background-color': '#8E5EB2'
         }
       ]
     };
