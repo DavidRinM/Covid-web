@@ -7,13 +7,14 @@
   width: 100%;
   height: 10%;
   display: flex;
+  justify-content: space-between;
 }
 
 
 .charts-container > div > section{
   width: 50%;
   height: 10%;
-  margin: ;
+  margin: 0;
 }
   
 
@@ -21,4 +22,18 @@
     .charts1 {
       width: 100%;
     }
-  }
+}
+
+#chart4 {
+  padding-right: 30px;
+}
+
+#chart6 {
+  padding-top: 30;
+  padding-bottom: 0px;
+}
+
+#lastTitle {
+  text-align: right;
+  justify-content: flex-end;
+}

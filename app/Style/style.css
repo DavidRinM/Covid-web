@@ -1,9 +1,13 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 h1{
     display: flex;
     text-align: center;
     justify-content: space-around;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;;
 }
 
 p{
@@ -16,6 +20,25 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+
+
+.facts{
+  border: 2px ridge rgb(52, 175, 155);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.facts #four {
+  margin-bottom: 100px;
+}
+
+
+.answer {
+  text-align: justify;
+}
   
 .page-content {
     min-height: 100%;
@@ -27,6 +50,28 @@ html, body {
 .page-content::after {
     content: "";
     display: block;
+}
+
+button {
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.learn-more button {
+  background-color: white;
+  color: black;
+  border: 2px ridge rgb(52, 175, 155);
+  background-color: rgb(93, 214, 194);
 }
   
 footer, .page-content::after {

@@ -54,3 +54,10 @@ var createChart6 = (data) => {
   pieSeries.hiddenState.properties.endAngle = -90;
   pieSeries.hiddenState.properties.startAngle = -90;
 }
+
+
+//Title
+let title = chart.titles.create();
+title.text = "Total Muertos vs Total Enfermos";
+title.fontSize = 30;
+title.marginBottom = 0;

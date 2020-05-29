@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/549494a02c.js" crossorigin="anonymous"></script>
 
+    <!--Roboto Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <!-- Plotly -->
     <script src=https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -54,7 +57,7 @@
             <ul>
                 <li><a href="./index.html">Acerca</a></li>
                 <li><a href="./mexico.html">México</a></li>
-                <li><a href="https://coronavirus.gob.mx/">Diviertete con el COVID</a></li>
+                <li><a href="https://coronavirus.gob.mx/">Saber más</a></li>
             </ul>
         </section>
     </nav>
@@ -63,22 +66,17 @@
         <!-- Charts -->
     <section class="charts-container">
         <div>
-            <section class="charts1" id="chart1">
-                <h3>Casos Totales Hombres vs Mujeres</h3>
-                <script src="Js/chart1.js"></script>
-                <p>
-                Verde: Hombres
-                Azul: Mujeres
-                </p>
-            </section>
             <section class="charts1" id="chart2">
-                <canvas id="pie-chart" width="900px" height="500px"></canvas>
+                <canvas id="pie-chart" width="800px" height="400px"></canvas>
                 <script src="Js/chart2.js"></script>
+            </section>
+            <section  class="charts2" id='chart3'style="width: 900px; height: 500px;">
+                <script src="Js/chart3.js"></script>
             </section>
         </div>
         <div>
-            <section  class="charts2" id='chart3'style="width: 900px; height: 500px;">
-                <script src="Js/chart3.js"></script>
+            <section  class="charts3" id='chart5'style="width: 900px; height: 500px;">
+                <script src="Js/chart5.js"></script>
             </section>
             <section  class="charts2" id='chart4'style="width: 600px; height: 350px;">
                 <script src="Js/chart4.js"></script>
@@ -86,20 +84,29 @@
         </div>
             
         <div>
-            <section  class="charts3" id='chart5'style="width: 900px; height: 500px;">
-                <script src="Js/chart5.js"></script>
+
+            <section class="charts1" id="chart1">
+                <h3>Casos Totales Hombres vs Mujeres</h3>
+                <script src="Js/chart1.js"></script>
+                <p>
+                Hombres: Azul Claro
+                Mujeres: Azul Obscuro
+                </p>
             </section>
+            <h3 id="lastTitle">Total Muertos vs Total Enfermos</h3>
             <section  class="charts3" id='chart6'style="width: 900px; height: 500px;">
                 <script src="Js/chart6.js"></script>
             </section>
         </div>
-       
-
+    </section>
+    <section class="learn-more">
+        <a href="https://coronavirus.gob.mx/datos/">
+            <button><b>Aprende más sobre COVID en México</b></button>
+        </a>
     </section>
 
-
 </body>
-<footer>copyrigth HEHE</footer>
+<footer>@copyright HEHE S.A. de C.V.</footer>
 </html>
 
 

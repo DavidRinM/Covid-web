@@ -87,30 +87,35 @@ var createChart4 = (data) => {
         "value-box": {
           "placement": "out",
           "offset-r": "-10",
-          "font-family": "Georgia",
+          "font-family": "Roboto",
           "font-size": 10,
           "font-weight": "normal"
         }
       },
       "plotarea": {
-        "margin-right": "45%",
-        "margin-top": "20%",
+        "margin-right": "30%",
+        "margin-top": "15%",
         "margin-bottom": "20%"
       },
       "series": [{
-          "values": [data["new_5/21/2020"]]
+          "values": [data["new_5/21/2020"]],
+          'background-color': '#67B7DC',
         },
         {
-          "values": [data["new_5/22/2020"]]
+          "values": [data["new_5/22/2020"]],
+          'background-color': '#6794DC'
         },
         {
-          "values": [data["new_5/23/2020"]]
+          "values": [data["new_5/23/2020"]],
+          'background-color': '#8E5EA2'
         },
         {
-          "values": [data["new_5/24/2020"]]
+          "values": [data["new_5/24/2020"]],
+          'background-color': '#6794BD'
         },
         {
-          "values": [data["new_5/25/2020"]]
+          "values": [data["new_5/25/2020"]],
+          'background-color': '#8E5EB2'
         }
       ]
     };
