@@ -29,7 +29,7 @@ var createChart2 = (data) =>{
       labels: ["Total Ambulatorio", "Total Hospitalizado"],
       datasets: [{
         label: "Population (millions)",
-        backgroundColor: ["#3e95cd", "#8e5ea2"],
+        backgroundColor: ["#6794DC", "#8e5ea2"],
         data: [data['total_ambulatorio'],data['total_hospitalizado']]
       }]
     },
@@ -37,7 +37,8 @@ var createChart2 = (data) =>{
       title: {
         display: true,
         text: 'Casos Ambulatorios vs Casos Hospitalizados',
-        responsive: false
+        responsive: true,
+        fontSize: 16
       }
     }
   });

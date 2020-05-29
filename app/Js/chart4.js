@@ -87,14 +87,14 @@ var createChart4 = (data) => {
         "value-box": {
           "placement": "out",
           "offset-r": "-10",
-          "font-family": "Georgia",
+          "font-family": "Roboto",
           "font-size": 10,
           "font-weight": "normal"
         }
       },
       "plotarea": {
-        "margin-right": "45%",
-        "margin-top": "20%",
+        "margin-right": "30%",
+        "margin-top": "15%",
         "margin-bottom": "20%"
       },
       "series": [{

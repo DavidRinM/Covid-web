@@ -40,7 +40,8 @@ var createChart3 = (data_chart) => {
         ]);
 
         var options = {
-            title: 'Casos por edad'
+            title: 'Casos por edad',
+            colors: ['#67B7DC', '#6794DC', '#8E5EA2', '#f3b49f', '#f6c7b6']
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart3'));
